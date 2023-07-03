@@ -12,7 +12,7 @@ createApp({
       stock: 0,
       precio: 0,
       // url: "https://ramirocodoacodo.pythonanywhere.com/productos/" + id,
-      url: "https://nicoandrada.pythonanywhere.com/productos"+id,
+      url: "https://nicoandrada.pythonanywhere.com/productos/"+id,
     };
   },
   methods: {
