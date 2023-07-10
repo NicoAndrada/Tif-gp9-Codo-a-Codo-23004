@@ -43,12 +43,15 @@ createApp({
       // Construye la URL para eliminar el producto especificado
       const url = this.url + "/" + producto;
       var options = {
-        method: "DELETE", // Establece el método HTTP como DELETE
+        method: "DELETE",  // Establece el método HTTP como DELETE
       };
       fetch(url, options)
         .then((res) => res.text()) // Convierte la respuesta en texto (or res.json())
         .then((res) => {
-          location.reload(); // Recarga la página actual después de eliminar el producto
+          if (confirm("¿Está seguro de que desea eliminar este producto?")) { // Agregue alerta de confirmación 
+            alert("¡Producto eliminado con éxito!"); // Agregue aviso de que se borro exitosamente
+            location.reload();// Recarga la página actual después de eliminar el producto
+          }
         });
     },
     grabar() {
